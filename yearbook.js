@@ -2,7 +2,7 @@ $(document).ready(function() {
 	var SD = prompt("STD or Davka ?")
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = new function()
-	var englishArray [] = null;
+	var englishArray = [];
 	var englishWord = null;
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
