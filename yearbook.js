@@ -1,7 +1,7 @@
 $(document).ready(function() {
 	var SD = prompt("STD or Davka ?")
 	var hebrew = prompt("Copy paste that Hebrew");
-	var func = function () {};
+	var func = function() {};
 	var englishArray = [];
 	var englishWord = null;
 	function sHebrewToEnglish(Letter) {
@@ -147,6 +147,9 @@ $(document).ready(function() {
 		case 'ק':
 	        return 'q'
 	        break;
+	    default:
+	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
+	
 		}
 	}
 	if (SD = "STD")
