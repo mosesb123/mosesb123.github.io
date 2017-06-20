@@ -87,9 +87,9 @@ $(document).ready(function() {
 		case 'ט':
 			return '+'
 			break;
-
 	    default:
 	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
+	    }
 	}
 	function dHebrewToEnglish(Letter) {
 		switch(Letter) {
@@ -194,4 +194,4 @@ $(document).ready(function() {
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
-};
+});
