@@ -188,7 +188,7 @@ $(document).ready(function() {
 	{
 		englishArray[i] = func(hebrew.charAt(i));
 	}
-	for(var j = englishArray.length - 1; j > 0; j++)
+	for(var j = englishArray.length; j > 0; j++)
 	{
 		englishWord+=englishArray[j];
 	}
