@@ -194,4 +194,4 @@ $(document).ready(function() {
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
-});
+};
