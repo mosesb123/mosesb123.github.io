@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	var SD = prompt("SPT or Davka B?").toLowerCase() ;
+	var SD = prompt("SPTiberian or Davka Bodel?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
-	var englishWord = " " ;
+	var englishWord = "" ;
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
 	    case 'ק':
@@ -176,7 +176,7 @@ $(document).ready(function() {
 	
 		}
 	}
-	if (SD = "spt")
+	if (SD = "STD")
 	{
 		func = sHebrewToEnglish;
 	}
@@ -188,9 +188,9 @@ $(document).ready(function() {
 	{
 		englishArray[i] = func(hebrew.charAt(i));
 	}
-	for(var j = englishArray.length - 1; j >= 0; j++)
+	for(var i = 0; i < englishArray.length; i++)
 	{
-		englishWord+=englishArray[j];
+		englishWord+=englishArray[i];
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
