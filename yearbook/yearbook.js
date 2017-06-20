@@ -190,7 +190,7 @@ $(document).ready(function() {
 	}
 	for(var j = 0; j < englishArray.length; j++)
 	{
-		englishWord+=englishArray[englishWord.length - j - 1];
+		englishWord+=englishArray[englishArray.length - j - 1];
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
