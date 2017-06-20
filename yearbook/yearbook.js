@@ -9,6 +9,9 @@ $(document).ready(function() {
 	    case 'ק':
 	        return 'q'
 	        break;
+	    case ' ':
+	        return ' '
+	        break;
 		case 'ו':
 			return 'w'
 			break;
@@ -110,6 +113,9 @@ $(document).ready(function() {
 	        break;
 		case 'ש':
 	        return 'y'
+	        break;
+	    case ' ':
+	        return ' '
 	        break;
 		case 'ץ':
 	        return 'u'
