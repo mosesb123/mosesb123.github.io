@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var SD = prompt("STD or Davka ?");
+	var SD = prompt("STD or Davka ?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
@@ -84,6 +84,9 @@ $(document).ready(function() {
 		case 'א':
 			return ')'
 			break;
+		case 'ט':
+			return '+'
+			break;
 
 	    default:
 	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
@@ -105,47 +108,68 @@ $(document).ready(function() {
 		case 'פ':
 	        return 't'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ש':
+	        return 'y'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ץ':
+	        return 'u'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'י':
+	        return 'i'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ן':
+	        return 'o'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'נ':
+	        return 'p'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ב':
+	        return 'a'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ף':
+	        return 's'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ה':
+	        return 'd'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ז':
+	        return 'f'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ח':
+	        return 'g'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ט':
+	        return 'h'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ך':
+	        return 'j'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'כ':
+	        return 'k'
 	        break;
-		case 'ק':
-	        return 'q'
+		case 'ל':
+	        return 'l'
+	        break;		
+	    case 'ת':
+	        return 'z'
+	        break;		
+	    case 'ר':
+	        return 'x'
+	        break;		
+	    case 'ד':
+	        return 'c'
+	        break;		
+	    case 'צ':
+	        return 'v'
+	        break;
+	    case 'ג':
+	        return 'b'
+	        break;	    
+	    case 'מ':
+	        return 'n'
+	        break;	    
+	    case 'ם':
+	        return 'm'
 	        break;
 	    default:
 	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
