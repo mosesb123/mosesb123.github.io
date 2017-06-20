@@ -1,9 +1,9 @@
 $(document).ready(function() {
-	var SD = prompt("SPT or Davka ?") ;
+	var SD = prompt("SPTiberian or Davka Bodel?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
-	var englishWord = null;
+	var englishWord = "" ;
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
 	    case 'ק':
