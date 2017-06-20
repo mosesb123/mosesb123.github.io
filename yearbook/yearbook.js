@@ -3,14 +3,11 @@ $(document).ready(function() {
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
-	var englishWord = "" ;
+	var englishWord = " " ;
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
 	    case 'ק':
 	        return 'q'
-	        break;
-	    case ' ':
-	        return ' '
 	        break;
 		case 'ו':
 			return 'w'
@@ -113,9 +110,6 @@ $(document).ready(function() {
 	        break;
 		case 'ש':
 	        return 'y'
-	        break;
-	    case ' ':
-	        return ' '
 	        break;
 		case 'ץ':
 	        return 'u'
