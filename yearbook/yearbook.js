@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var SD = prompt("SPTiberian or Davka Bodel?") ;
+	var SD = prompt("SPT or Davka B?").toLowerCase() ;
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
@@ -176,7 +176,7 @@ $(document).ready(function() {
 	
 		}
 	}
-	if (SD = "STD")
+	if (SD = "spt")
 	{
 		func = sHebrewToEnglish;
 	}
@@ -188,9 +188,9 @@ $(document).ready(function() {
 	{
 		englishArray[i] = func(hebrew.charAt(i));
 	}
-	for(var i = 0; i < englishArray.length; i++)
+	for(var j = englishArray.length - 1; j >= 0; j++)
 	{
-		englishWord+=englishArray[i];
+		englishWord+=englishArray[j];
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
