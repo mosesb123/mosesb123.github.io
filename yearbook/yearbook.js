@@ -1,5 +1,5 @@
 $(document).ready(function() {
-	var SD = prompt("STD or Davka ?") ;
+	var SD = prompt("SPT or Davka ?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
 	var englishArray = [];
