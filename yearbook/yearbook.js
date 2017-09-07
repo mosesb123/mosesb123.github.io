@@ -87,8 +87,11 @@ $(document).ready(function() {
 		case 'ט':
 			return '+'
 			break;
+		case ' ':
+			return ' '
+			break;
 	    default:
-	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
+	        alert("ERROR: Input not a hebrew letter or space")
 	    }
 	}
 	function dHebrewToEnglish(Letter) {
@@ -171,8 +174,11 @@ $(document).ready(function() {
 	    case 'ם':
 	        return 'm'
 	        break;
+		case ' ':
+			return ' '
+			break;
 	    default:
-	        alert("K THIS CODE DOESN'T WORK IF U DON'T PUT A HEBREW LETTER")
+	        alert("ERROR: input not a hebrew letter or space")
 	
 		}
 	}
