@@ -91,7 +91,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        alert("ERROR: Input not a hebrew letter or space")
+	        return ' '
 	    }
 	}
 	function dHebrewToEnglish(Letter) {
@@ -178,7 +178,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        alert("ERROR: input not a hebrew letter or space")
+	        return ' '
 	
 		}
 	}
