@@ -1,94 +1,131 @@
 $(document).ready(function() {
 	var SD = prompt("SPT or Davka B?") ;
+	var font = prompt("Font Size?");
+	var textBox = prompt("How big is the text box (in grid boxes)");
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
+	var superFont = font * textBox / 48;
+	var maxLeng = 0;
 	var englishArray = [];
 	var englishWord = " " ;
+	var lineLeng = 0;
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
 	    case 'ק':
-	        return 'q'
+			lineLeng += (11/200);
+	        return 'q';
 	        break;
 		case 'ו':
-			return 'w'
+			lineLeng += (5/151);
+			return 'w';
 			break;
 		case 'ר':
-			return 'r'
+			lineLeng += (11/200);
+			return 'r';
 			break;
 		case 'ת':
-			return 't'
+			lineLeng += (11/200);
+			return 't';
 			break;
 		case 'י':
-			return 'y'
+			lineLeng += (5/151);
+			return 'y';
 			break;
 		case 'פ':
-			return 'p'
+			lineLeng += (11/200);
+			return 'p';
 			break;
 		case 'ס':
-			return 's'
+			lineLeng += (11/200);
+			return 's';
 			break;
 		case 'ד':
-			return 'd'
+			lineLeng += (11/200);
+			return 'd';
 			break;
 		case 'ג':
-			return 'g'
+			lineLeng += (5/151);
+			return 'g';
 			break;
 		case 'ה':
-			return 'h'
+			lineLeng += (11/200);
+			return 'h';
 			break;
 		case 'כ':
-			return 'k'
+			lineLeng += (11/200);
+			return 'k';
 			break;
 		case 'ל':
-			return 'l'
+			lineLeng += (11/200);
+			return 'l';
 			break;
 		case 'ז':
-			return 'z'
+			lineLeng += (5/151);
+			return 'z';
 			break;
 		case 'ח':
-			return 'x'
+			lineLeng += (11/200);
+			return 'x';
 			break;
 		case 'צ':
-			return 'c'
+			lineLeng += (11/200);
+			return 'c';
 			break;
 		case 'ב':
-			return 'b'
+			lineLeng += (11/200);
+			return 'b';
 			break;
 		case 'נ':
-			return 'n'
+			lineLeng += (5/151);
+			return 'n';
 			break;
 		case 'מ':
-			return 'm'
+			lineLeng += (11/200);
+			return 'm';
 			break;
 		case 'ף':
-			return 'P'
+			lineLeng += (11/200);
+			return 'P';
 			break;
 		case 'ך':
-			return 'K'
+			lineLeng += (11/200);
+			return 'K';
 			break;
 		case 'ץ':
-			return 'C'
+			lineLeng += (11/200);
+			return 'C';
 			break;
 		case 'ן':
-			return 'N'
+			lineLeng += (5/151);
+			return 'N';
 			break;
 		case 'ש':
-			return '#'
+			lineLeng += (11/200);
+			return '#';
 			break;
 		case 'ם':
-			return 'M'
+			lineLeng += (11/200);
+			return 'M';
 			break;
 		case 'ע':
-			return '('
+			lineLeng += (11/200);
+			return '(';
 			break;
 		case 'א':
-			return ')'
+			lineLeng += (11/200);
+			return ')';
 			break;
 		case 'ט':
-			return '+'
+			lineLeng += (11/200);
+			return '+';
 			break;
 		case ' ':
-			return ' '
+			lineLeng += (5/173);
+			return ' ';
+			break;
+		case '.':
+			lineLeng += (7/200);
+			return '*';
 			break;
 	    default:
 	        return letter
@@ -185,19 +222,31 @@ $(document).ready(function() {
 	if (SD = "SPT")
 	{
 		func = sHebrewToEnglish;
+		maxLeng = superFont * 5/151 * 235 * 6 ;
 	}
 	else
 	{
 		func = dHebrewToEnglish;
+		maxLeng = superFont;
 	}
-	for (var i = 0; i < hebrew.length; i++)
+
+
+ var p = 0;
+
+	for (var j = 0; j < hebrew.length; j++)
 	{
-		englishArray[i] = func(hebrew.charAt(i));
+		englishArray[p] = func(hebrew.charAt(hebrew.length - j - 1));
+		if(lineLeng >= maxLeng) {
+		// space deciding
+		p++;
+		lineLeng = 0;
+		}
 	}
 	for(var j = 0; j < englishArray.length; j++)
 	{
-		englishWord+=englishArray[englishArray.length - j - 1];
+		englishWord+=englishArray[englishArray.length];
 	}
+	
 	alert(englishWord);
 	$('#return').text(englishWord);
 });
