@@ -9,7 +9,7 @@ $(document).ready(function() {
     var englishLines = [];
     var englishWords = [];
     var temp1 = ""; //All of the words in a line
-    var temp2 = "";//Output of the line array into a string
+    var temp2 = ""; //Output of the line array into a string
     var englishWord = "";
     var lineLeng = 0; //counter
     function sHebrewToEnglish(Letter) {
@@ -252,14 +252,15 @@ $(document).ready(function() {
         func = dHebrewToEnglish;
         maxLeng = superFont;
     }
-arrayWord(hebrew);
-}
+    arrayWord(hebrew);
 
-for (let i = englishLines.length - 1; i > 0; i--) //lines into output
-{
-    temp2 += englishLines[i];
-}
 
-alert(temp2); $('#return').text(temp2);
+    for (let i = englishLines.length - 1; i > 0; i--) //lines into output
+    {
+        temp2 += englishLines[i];
+    }
+
+    alert(temp2);
+    $('#return').text(temp2);
 
 });
