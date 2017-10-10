@@ -243,10 +243,9 @@ $(document).ready(function() {
 
                 } else {
                 	console.log(lineLeng);
-                	console.log(maxLeng);
                     englishWords.push(englishWord);
                 }
-                englishWord = null;
+               
             }
         }
         for(let i = 0; i<englishWords.length; i++) {
