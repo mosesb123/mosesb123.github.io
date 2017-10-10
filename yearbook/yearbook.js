@@ -239,12 +239,12 @@ $(document).ready(function() {
 	    	englishWord = null;
 	}
 	 englishWord = null; 
-
+	}
     for(let i = 0; i<englishArray.length; i++) //array into word
     {
         englishWord += englishArray[i]; 
     }
-	}
+	
 	alert(englishWord);
 	$('#return').text(englishWord);
 });
