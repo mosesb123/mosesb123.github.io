@@ -234,7 +234,7 @@ $(document).ready(function() {
         englishWord += func(hebrew[i]);
         if (lineLeng >= maxLeng) {
 			console.log("running"); 
-            i += (englishWord.lastIndexOf(' ') - i);
+            i += (englishWord.indexOf(' ') - i);
             englishWord = englishWord.substring(englishWord.lastIndexOf(' ')+1);
             englishArray.push(englishWord);
             englishWord = "";
