@@ -241,7 +241,8 @@ $(document).ready(function() {
                     console.log('i');
 
                 } else {
-                	console.log('else');
+                	console.log(lineLeng);
+                	console.log(maxLeng);
                     englishWords.push(englishWord);
                 }
                 englishWord = null;
@@ -251,7 +252,6 @@ $(document).ready(function() {
     if (SD = "SPT") {
         func = sHebrewToEnglish;
         maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
-        console.log(maxLeng);
     } else {
         func = dHebrewToEnglish;
         maxLeng = superFont;
