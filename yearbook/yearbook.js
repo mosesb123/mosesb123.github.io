@@ -228,6 +228,7 @@ $(document).ready(function() {
     	console.log("running");
         for (let i = word.length - 1; i > 0; i--) {
             englishWord += func(word[i]);
+            console.log(englishWord);
             if (word[i] = ' ') {
                 if (lineLeng >= maxLeng) {
                     for (let j = 0; j < englishWords.length - 1; j++) {
@@ -248,7 +249,7 @@ $(document).ready(function() {
                 
                 englishWord = "";
             }
-            console.log(englishWord);
+
         }
         for(let i = 0; i<englishWords.length; i++) {
         	temp1+=englishWords[i];
