@@ -230,7 +230,7 @@ $(document).ready(function() {
 		maxLeng = superFont;
 	}
 	for(let i = hebrew.length-1; i>=0; i--) //reverse and line flip
-	{
+	{   console.log(englishWord);
 	    englishWord += func(hebrew[i]);
 	      if(lineLeng >= maxLeng){
 	      	i += (englishWorld.lastIndexOf(' ') - i);
@@ -246,7 +246,7 @@ $(document).ready(function() {
         englishWord += englishArray[i]; 
     }
 	
-	alert(englishArray);
+	alert(englishWord);
 	$('#return').text(englishWord);
 });
 
