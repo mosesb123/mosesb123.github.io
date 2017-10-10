@@ -237,6 +237,7 @@ $(document).ready(function() {
                     i += englishWords[englishWords.length - 1].length; // last word is counted again bc its not in the new line
                     englishWords = [];
                     englishLines.push(temp1); // putting in the line of words
+                    temp1 = "";
                     lineLeng = 0;
                     console.log('i');
 
@@ -248,6 +249,10 @@ $(document).ready(function() {
                 englishWord = null;
             }
         }
+        for(let i = 0; i<englishWords.length; i++) {
+        	temp1+=englishWords[i];
+        }
+        englishLines.push(temp1);
     }
     if (SD = "SPT") {
         func = sHebrewToEnglish;
