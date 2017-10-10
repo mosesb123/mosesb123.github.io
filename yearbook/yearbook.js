@@ -245,9 +245,10 @@ $(document).ready(function() {
                 	console.log(lineLeng);
                     englishWords.push(englishWord);
                 }
-                console.log(englishWord);
+                
                 englishWord = "";
             }
+            console.log(englishWord);
         }
         for(let i = 0; i<englishWords.length; i++) {
         	temp1+=englishWords[i];
