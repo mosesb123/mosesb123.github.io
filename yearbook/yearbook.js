@@ -232,7 +232,7 @@ $(document).ready(function() {
                     for (let j = 0; j < englishWords - 1; j++) {
                         temp1 += englishWords[j];
                     }
-                    i -= englishWords[englishWords.length - 1].length; // last word is counted again bc its not in the new line
+                    i += englishWords[englishWords.length - 1].length; // last word is counted again bc its not in the new line
                     englishWords = [];
                     englishLines.push(temp1); // putting in the line of words
                     lineLeng = 0;
