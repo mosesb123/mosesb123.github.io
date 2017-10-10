@@ -246,7 +246,7 @@ $(document).ready(function() {
                     englishWords.push(englishWord);
                 }
                 console.log(englishWord);
-                englishWord = null;
+                englishWord = "";
             }
         }
         for(let i = 0; i<englishWords.length; i++) {
