@@ -237,6 +237,7 @@ $(document).ready(function() {
 	   	 	englishWord=englishWord.substring(englishWord.lastIndexOf(' '));
 	    	englishArray.push(englishWord);
 	    	englishWord = null;
+	    	lineLeng = 0;
 	}
 	 englishWord = null; 
 	}
@@ -245,7 +246,7 @@ $(document).ready(function() {
         englishWord += englishArray[i]; 
     }
 	
-	alert(englishArray);
+	alert(englishWord);
 	$('#return').text(englishWord);
 });
 
