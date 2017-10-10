@@ -229,10 +229,23 @@ $(document).ready(function() {
 		func = dHebrewToEnglish;
 		maxLeng = superFont;
 	}
-	for(let i = hebrew.length-1; i>=0; i--)
+	for(let i = hebrew.length-1; i>=0; i--) //reverse and line flip
 	{
 	    englishWord += func(hebrew[i]);
+	      if(lineLeng >= maxLeng){
+	      	i += (englishWorld.lastIndexOf(' ') - i);
+	   	 	englishWord=englishWord.substring(englishWord.lastIndexOf(' '));
+	    	englishArray.push(englishWord);
+	    	englishWord = null;
+	}
+	 englishWord = null; 
+
+    for(let i = 0; i<englishArray.length; i++) //array into word
+    {
+        englishWord += englishArray[i]; 
+    }
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
 });
+
