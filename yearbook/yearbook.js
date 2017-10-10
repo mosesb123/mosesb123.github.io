@@ -6,7 +6,10 @@ $(document).ready(function() {
     var func = function() {};
     var superFont = (textBox / 48) / font; //relative font fize
     var maxLeng = 0; //should be null
-    var englishArray = [];
+    var englishLines = [];
+    var englishWords = [];
+    var temp1 = ""; //All of the words in a line
+    var temp2 = "";//Output of the line array into a string
     var englishWord = "";
     var lineLeng = 0; //counter
     function sHebrewToEnglish(Letter) {
@@ -220,38 +223,43 @@ $(document).ready(function() {
 
         }
     }
-    if (SD = "SPT") {	
+
+    function arrayWord(word) {
+        for (let i = word.length - 1; i >= 0; i--) {
+            englishWord += func(word[i]);
+            if (word[i] = ' ') {
+                if (lineLeng >= maxLeng) {
+                    for (let j = 0; j < englishWords - 1; j++) {
+                        temp1 += englishWords[j];
+                    }
+                    i -= englishWords[englishWords.length - 1].length; // last word is counted again bc its not in the new line
+                    englishWords = [];
+                    englishLines.push(temp1); // putting in the line of words
+                    lineLeng = 0;
+
+                } else {
+                    englishWords.push(englishWord);
+                }
+                englishWord = null;
+            }
+        }
+    }
+    if (SD = "SPT") {
         func = sHebrewToEnglish;
-		maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
-		console.log(maxLeng); 
-		} else {
+        maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
+        console.log(maxLeng);
+    } else {
         func = dHebrewToEnglish;
         maxLeng = superFont;
     }
-    for (let i = hebrew.length - 1; i >= 0; i--) //reverse and line flip
-    {
-        console.log(englishWord);
-        englishWord += func(hebrew[i]);
-        if (lineLeng >= maxLeng) {
-			console.log("running"); 
-            i += (englishWord.indexOf(' ') - i);
-            englishWord = englishWord.substring(englishWord.lastIndexOf(' ')+1);
-            englishArray.push(englishWord);
-            englishWord = "";
-            lineLeng = 0;
-        }
-      //  englishArray.push(englishWord);
-      //  englishWord = null;
-    }
-	englishArray.push(englishWord); 
-	englishWord = ""; 
-	
-    for (let i = 0; i < englishArray.length; i++) //array into word
-    {
-        englishWord += englishArray[i];
-    }
+arrayWord(hebrew);
+}
 
-    alert(englishWord);
-	alert(englishArray); 
-    $('#return').text(englishWord);
+for (let i = englishLines.length - 1; i > 0; i--) //lines into output
+{
+    temp2 += englishLines[i];
+}
+
+alert(temp2); $('#return').text(temp2);
+
 });
