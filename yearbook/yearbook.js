@@ -227,9 +227,9 @@ $(document).ready(function() {
     function arrayWord(word) {
     	console.log("running");
         for (let i = word.length - 1; i > 0; i--) {
-            englishWord += func(word[i]);
+            englishWord += func(word.charAt(i));
             console.log(englishWord);
-            if (word[i] = ' ') {
+            if (englishWord.charAt(englishWord.length-1) = ' ') {
                 if (lineLeng >= maxLeng) {
                     for (let j = 0; j < englishWords.length - 1; j++) {
                         temp1 += englishWords[j];
