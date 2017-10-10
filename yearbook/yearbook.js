@@ -229,7 +229,7 @@ $(document).ready(function() {
         for (let i = word.length - 1; i > 0; i--) {
             englishWord += func(word.charAt(i));
             console.log(englishWord);
-            if (englishWord.charAt(englishWord.length-1) = ' ') {
+            if (englishWord.charAt(englishWord.length-1) == ' ') {
                 if (lineLeng >= maxLeng) {
                     for (let j = 0; j < englishWords.length - 1; j++) {
                         temp1 += englishWords[j];
@@ -256,7 +256,7 @@ $(document).ready(function() {
         }
         englishLines.push(temp1);
     }
-    if (SD = "SPT") {
+    if (SD == "SPT") {
         func = sHebrewToEnglish;
         maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
     } else {
