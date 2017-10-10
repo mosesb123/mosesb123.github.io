@@ -232,7 +232,7 @@ $(document).ready(function() {
         console.log(englishWord);
         englishWord += func(hebrew[i]);
         if (lineLeng >= maxLeng) {
-            i += (englishWorld.lastIndexOf(' ') - i);
+            i += (englishWord.lastIndexOf(' ') - i);
             englishWord = englishWord.substring(englishWord.lastIndexOf(' '));
             englishArray.push(englishWord);
             englishWord = null;
