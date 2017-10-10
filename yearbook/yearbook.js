@@ -7,7 +7,7 @@ $(document).ready(function() {
     var superFont = (textBox / 48) / font; //relative font fize
     var maxLeng = 0; //should be null
     var englishArray = [];
-    var englishWord = null;
+    var englishWord = "";
     var lineLeng = 0; //counter
     function sHebrewToEnglish(Letter) {
         switch (Letter) {
@@ -220,10 +220,11 @@ $(document).ready(function() {
 
         }
     }
-    if (SD = "SPT") {
+    if (SD = "SPT") {	
         func = sHebrewToEnglish;
-        maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
-    } else {
+		maxLeng = 5 / 151 * 235 * 6 * superFont; //max amount of super chars allowed
+		console.log(maxLeng); 
+		} else {
         func = dHebrewToEnglish;
         maxLeng = superFont;
     }
@@ -232,20 +233,25 @@ $(document).ready(function() {
         console.log(englishWord);
         englishWord += func(hebrew[i]);
         if (lineLeng >= maxLeng) {
+			console.log("running"); 
             i += (englishWord.lastIndexOf(' ') - i);
-            englishWord = englishWord.substring(englishWord.lastIndexOf(' '));
+            englishWord = englishWord.substring(englishWord.lastIndexOf(' ')+1);
             englishArray.push(englishWord);
-            englishWord = null;
+            englishWord = "";
             lineLeng = 0;
         }
-        englishArray.push(englishWord);
-        englishWord = null;
+      //  englishArray.push(englishWord);
+      //  englishWord = null;
     }
+	englishArray.push(englishWord); 
+	englishWord = ""; 
+	
     for (let i = 0; i < englishArray.length; i++) //array into word
     {
         englishWord += englishArray[i];
     }
 
     alert(englishWord);
+	alert(englishArray); 
     $('#return').text(englishWord);
 });
