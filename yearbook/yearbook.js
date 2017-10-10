@@ -241,6 +241,7 @@ $(document).ready(function() {
                     console.log('i');
 
                 } else {
+                	console.log('else');
                     englishWords.push(englishWord);
                 }
                 englishWord = null;
