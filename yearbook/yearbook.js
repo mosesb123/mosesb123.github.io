@@ -237,6 +237,7 @@ $(document).ready(function() {
                     }
                     i += englishWords[englishWords.length - 1].length; // last word is counted again bc its not in the new line
                     englishWords = [];
+                    console.log(temp1);
                     englishLines.push(temp1); // putting in the line of words
                     temp1 = "";
                     lineLeng = 0;
