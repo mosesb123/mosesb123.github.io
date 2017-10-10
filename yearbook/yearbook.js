@@ -245,7 +245,8 @@ $(document).ready(function() {
                 	console.log(lineLeng);
                     englishWords.push(englishWord);
                 }
-               
+                console.log(englishWord);
+                englishWord = null;
             }
         }
         for(let i = 0; i<englishWords.length; i++) {
@@ -264,7 +265,7 @@ $(document).ready(function() {
 
 
     for (let i = englishLines.length - 1; i > 0; i--) //lines into output
-    {
+    { console.log(englishLines[i]);
         temp2 += englishLines[i];
     }
 
