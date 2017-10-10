@@ -4,7 +4,7 @@ $(document).ready(function() {
 	var textBox = prompt("How big is the text box (in grid boxes)");
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
-	var superFont = font * textBox / 48; //relative font fize
+	var superFont = (textBox / 48) / font; //relative font fize
 	var maxLeng = 0; //should be null
 	var englishArray = [];
 	var englishWord = null ;
@@ -222,7 +222,7 @@ $(document).ready(function() {
 	if (SD = "SPT")
 	{
 		func = sHebrewToEnglish;
-		maxLeng = superFont * 5/151 * 235 * 6 ; //max amount of super chars allowed
+		maxLeng =  5/151 * 235 * 6 * superFont ; //max amount of super chars allowed
 	}
 	else
 	{
@@ -239,6 +239,7 @@ $(document).ready(function() {
 	    	englishWord = null;
 	    	lineLeng = 0;
 	}
+	 englishArray.push(englishWord);
 	 englishWord = null; 
 	}
     for(let i = 0; i<englishArray.length; i++) //array into word
