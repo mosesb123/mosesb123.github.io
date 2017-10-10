@@ -246,7 +246,7 @@ $(document).ready(function() {
         englishWord += englishArray[i]; 
     }
 	
-	alert(englishWord);
+	alert(englishArray);
 	$('#return').text(englishWord);
 });
 
