@@ -7,7 +7,7 @@ $(document).ready(function() {
 	var superFont = font * textBox / 48; //relative font fize
 	var maxLeng = 0; //should be null
 	var englishArray = [];
-	var englishWord = " " ;
+	var englishWord = null ;
 	var lineLeng = 0; //counter
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
