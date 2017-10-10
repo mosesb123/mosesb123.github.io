@@ -230,7 +230,7 @@ $(document).ready(function() {
             englishWord += func(word[i]);
             if (word[i] = ' ') {
                 if (lineLeng >= maxLeng) {
-                    for (let j = 0; j < englishWords - 1; j++) {
+                    for (let j = 0; j < englishWords.length - 1; j++) {
                         temp1 += englishWords[j];
                         console.log('j');
                     }
