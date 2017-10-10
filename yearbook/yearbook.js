@@ -4,11 +4,11 @@ $(document).ready(function() {
 	var textBox = prompt("How big is the text box (in grid boxes)");
 	var hebrew = prompt("Copy paste that Hebrew");
 	var func = function() {};
-	var superFont = font * textBox / 48;
-	var maxLeng = 0;
+	var superFont = font * textBox / 48; //relative font fize
+	var maxLeng = 0; //should be null
 	var englishArray = [];
 	var englishWord = " " ;
-	var lineLeng = 0;
+	var lineLeng = 0; //counter
 	function sHebrewToEnglish(Letter) {
 		switch(Letter) {
 	    case 'ק':
@@ -222,31 +222,14 @@ $(document).ready(function() {
 	if (SD = "SPT")
 	{
 		func = sHebrewToEnglish;
-		maxLeng = superFont * 5/151 * 235 * 6 ;
+		maxLeng = superFont * 5/151 * 235 * 6 ; //max amount of super chars allowed
 	}
 	else
 	{
 		func = dHebrewToEnglish;
 		maxLeng = superFont;
 	}
-
-
- var p = 0;
-
-	for (var j = 0; j < hebrew.length; j++)
-	{
-		englishArray[p] = func(hebrew.charAt(hebrew.length - j - 1));
-		if(lineLeng >= maxLeng) {
-		// space deciding
-		p++;
-		lineLeng = 0;
-		}
-	}
-	for(var j = 0; j < englishArray.length; j++)
-	{
-		englishWord+=englishArray[englishArray.length];
-	}
-	
+englishWord += func(hebrew[i]);
 	alert(englishWord);
 	$('#return').text(englishWord);
 });
