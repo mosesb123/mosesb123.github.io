@@ -1,4 +1,4 @@
-//1109pm
+//920pm
 $(document).ready(function() {
 	var fontInput = prompt("SPT or Davka B?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
@@ -253,7 +253,7 @@ $(document).ready(function() {
 		{
 			lineLeng = 0;
 			i -= i - englishLines.join("").lastIndexOf(' ');
-			for (int k = 0; k < i; k++)
+			for (var k = 0; k < i; k++)
 			englishArray [j] = englishLines[k];
 			englishArray [j] = englishArray[j].reverse();
 			j++
