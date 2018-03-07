@@ -91,7 +91,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        return letter
+	        return Letter
 	    }
 	}
 	function dHebrewToEnglish(Letter) {
@@ -178,7 +178,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        return letter
+	        return Letter
 	
 		}
 	}
