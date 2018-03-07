@@ -184,9 +184,7 @@ $(document).ready(function() {
         case '.':
             return '*';
             break;
-		case ","
-        	return'\\'
-        	break;
+
 	    default:
 	        return Letter
 	
