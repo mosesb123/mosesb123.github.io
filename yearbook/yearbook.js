@@ -1,5 +1,4 @@
-//911pm
-
+//920pm
 $(document).ready(function() {
 	var SD = prompt("SPT or Davka B?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
@@ -198,13 +197,13 @@ $(document).ready(function() {
 	{
 		func = dHebrewToEnglish;
 	}
-	for (var i = 0; i < hebrew.length; i++)
+	for (var i = hebrew.length - 1; i > 0; i--)
 	{
 		englishArray[i] = func(hebrew.charAt(i));
 	}
 	for(var j = 0; j < englishArray.length; j++)
 	{
-		englishWord+=englishArray[englishArray.length - j - 1];
+		englishWord+=englishArray[j];
 	}
 	alert(englishWord);
 	$('#return').text(englishWord);
