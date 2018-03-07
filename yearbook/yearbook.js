@@ -1,4 +1,4 @@
-//903pm
+//911pm
 
 $(document).ready(function() {
 	var SD = prompt("SPT or Davka B?") ;
@@ -92,6 +92,9 @@ $(document).ready(function() {
 		case ' ':
 			return ' '
 			break;
+		case null:
+			return ' '
+			break;
 	    default:
 	        return letter
 	    }
@@ -177,6 +180,9 @@ $(document).ready(function() {
 	        return 'm'
 	        break;
 		case ' ':
+			return ' '
+			break;
+		case null:
 			return ' '
 			break;
 	    default:
