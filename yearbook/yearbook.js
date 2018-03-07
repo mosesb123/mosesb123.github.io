@@ -13,7 +13,7 @@ $(document).ready(function() {
 	var LETTER_PER_FONTUNIT = 864;
 	var limiter =   (textBoxSize/TEXT_BOX_MAX) / fontSize;
 	var smallLimiter= limiter * 0.60204696;
-	var spaceLimiter = linter * 0.525486075;
+	var spaceLimiter = limiter * 0.525486075;
 	var periodLimiter = limiter * 0.63636363636;
 	var letterUnitPerLine = LETTER_PER_FONTUNIT * limiter;
 	var lineLeng = 0;
