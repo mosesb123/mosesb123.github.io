@@ -1,4 +1,4 @@
-//924pm
+//927pm
 $(document).ready(function() {
 	var SD = prompt("SPT or Davka B?") ;
 	var hebrew = prompt("Copy paste that Hebrew");
@@ -95,7 +95,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        return letter
+	        return Letter
 	    }
 	}
 	function dHebrewToEnglish(Letter) {
@@ -185,7 +185,7 @@ $(document).ready(function() {
 			return ' '
 			break;
 	    default:
-	        return letter
+	        return Letter
 	
 		}
 	}
