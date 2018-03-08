@@ -1,4 +1,4 @@
-//935pm
+//938pm
 $(document).ready(function() {
     var fontInput = prompt("SPT or Davka B?");
     var hebrew = prompt("Copy paste that Hebrew");
@@ -18,6 +18,7 @@ $(document).ready(function() {
     var periodLetter = 0.63636363636;
     var lettersAllowed = LETTER_PER_FONTUNIT * limiter;
     var lineLeng = 0;
+    var j = 0;
 
     function sHebrewToEnglish(Letter) {
         switch (Letter) {
