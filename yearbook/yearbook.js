@@ -138,10 +138,10 @@ $(document).ready(function() {
                 return '*';
                 break;
             case ","
-            return 'D'
+            return 'D';
             break;
             case null:
-                return ' '
+                return ' ';
                 break;
             default:
                 return Letter
@@ -235,10 +235,10 @@ $(document).ready(function() {
                 return '*';
                 break;
             case ","
-            return 'D'
+            return 'D';
             break;
             case null:
-                return ' '
+                return ' ';
                 break;
             default:
                 return Letter
