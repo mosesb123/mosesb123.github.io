@@ -94,7 +94,7 @@ $(document).ready(function() {
             return '*';
             break;
         case ",":
-        	return'\\';
+        	return'D';
         	break;
 	    default:
 	        return Letter
