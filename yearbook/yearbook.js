@@ -137,7 +137,7 @@ $(document).ready(function() {
                 lineLeng += periodLetter;
                 return '*';
                 break;
-            case ","
+            case ",":
             return 'D';
             break;
             case null:
@@ -234,7 +234,7 @@ $(document).ready(function() {
             case '.':
                 return '*';
                 break;
-            case ","
+            case ",":
             return 'D';
             break;
             case null:
