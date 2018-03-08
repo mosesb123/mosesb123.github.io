@@ -265,7 +265,7 @@ $(document).ready(function() {
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
             i -= englishLines.indexOf(' ') -1;
-            englishArray[j] = reverseString(englishLines.substring(0, englishLines.indexOf(' ')));
+            englishArray[j] = reverseString(englishLines.substring(englishLines.indexOf(' ')));
             j++
             console.log(englishLines+"IF START")
             englishLines = "";
