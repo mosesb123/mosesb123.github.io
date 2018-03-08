@@ -10,7 +10,7 @@ $(document).ready(function() {
     var textBoxSize = prompt("How big is the text box");
     var fontSize = prompt("How big is your font");
     var TEXT_BOX_MAX = 48;
-    var LETTER_PER_FONTUNIT = 864;
+    var LETTER_PER_FONTUNIT = 884.454545453;
     var limiter = (textBoxSize / TEXT_BOX_MAX) / fontSize;
     var letter = 1;
     var smallLetter = .54545454545;
