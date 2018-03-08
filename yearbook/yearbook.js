@@ -1,4 +1,4 @@
-//920pm
+//935pm
 $(document).ready(function() {
     var fontInput = prompt("SPT or Davka B?");
     var hebrew = prompt("Copy paste that Hebrew");
@@ -253,7 +253,7 @@ $(document).ready(function() {
     }
 
     for (var i = 0; i < hebrew.length; i++) {
-        englishLines += func(hebrew.charAt(i));
+        englishLines += sHebrewToEnglish(hebrew.charAt(i)); //FIX LATER
         console.log(englishLines+"LOOP")
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
