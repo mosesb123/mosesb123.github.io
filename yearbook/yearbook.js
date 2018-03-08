@@ -138,7 +138,7 @@ $(document).ready(function() {
                 return '*';
                 break;
             case ","
-            return '\\'
+            return 'D'
             break;
             case null:
                 return ' '
@@ -235,7 +235,7 @@ $(document).ready(function() {
                 return '*';
                 break;
             case ","
-            return '\\'
+            return 'D'
             break;
             case null:
                 return ' '
