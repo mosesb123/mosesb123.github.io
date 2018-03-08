@@ -1,4 +1,4 @@
-//938pm
+//940pm
 $(document).ready(function() {
     var fontInput = prompt("SPT or Davka B?");
     var hebrew = prompt("Copy paste that Hebrew");
@@ -246,6 +246,12 @@ $(document).ready(function() {
 
         }
     }
+    function reverseString(str) {
+    var split = str.split("");
+    var reverse = split.reverse();
+    var join = reverse.join("");
+    return join; 
+}
 
     if (fontInput = "Davka B") {
         func = dHebrewToEnglish;
@@ -259,14 +265,15 @@ $(document).ready(function() {
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
             i -= englishLines.lastIndexOf(' ');
-            englishArray[j] = englishLines.reverse();
+            englishArray[j] = reverseString(englishLines);
             j++
             console.log(englishLines+"IF START")
             englishLines = "";
             console.log(englishLines+"IF END")
         }
     }
-    englishWord = englishArray.reverse().join("");
+    englishWord = englishArray.join("");
+    reverseString(englishWord);
     alert(englishWord);
     $('#return').text(englishWord);
 });
