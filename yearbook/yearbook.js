@@ -13,9 +13,9 @@ $(document).ready(function() {
     var LETTER_PER_FONTUNIT = 864;
     var limiter = (textBoxSize / TEXT_BOX_MAX) / fontSize;
     var letter = 1;
-    var smallLetter = 0.60204696;
-    var spaceLetter = 0.525486075;
-    var periodLetter = 0.63636363636;
+    var smallLetter = .54545454545;
+    var spaceLetter = .53409090909;
+    var periodLetter = .625;
     var lettersAllowed = LETTER_PER_FONTUNIT * limiter;
     var lineLeng = 0;
     var j = 0;
@@ -264,7 +264,7 @@ $(document).ready(function() {
         console.log(englishLines+"LOOP")
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
-            i -= englishLines.indexOf(' ') +1;
+            i -= englishLines.indexOf(' ') -1;
             englishArray[j] = reverseString(englishLines);
             j++
             console.log(englishLines+"IF START")
