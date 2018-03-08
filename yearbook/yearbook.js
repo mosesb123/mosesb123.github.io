@@ -5,7 +5,7 @@ $(document).ready(function() {
     var func = function() {};
     var lineOrder = 0;
     var englishArray = [];
-    var englishLines = [];
+    var englishLines = " ";
     var englishWord = " ";
     var textBoxSize = prompt("How big is the text box");
     var fontSize = prompt("How big is your font");
@@ -253,14 +253,13 @@ $(document).ready(function() {
     }
 
     for (var i = 0; i < hebrew.length; i++) {
-        englishLines[i] = func(hebrew.charAt(i));
+        englishLines += func(hebrew.charAt(i));
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
-            i -= i - englishLines.join("").lastIndexOf(' ');
-            for (var k = 0; k < i; k++)
-                englishArray[j] = englishLines[k];
-            englishArray[j] = englishArray[j].reverse();
+            i -= englishLines.lastIndexOf(' ');
+            englishArray[j] = englishLines.reverse();
             j++
+            englishLines = "";
         }
     }
     englishWord = englishArray.reverse().join("");
