@@ -1,4 +1,4 @@
-//920pm
+//1000pm
 $(document).ready(function() {
     var fontInput = prompt("SPT or Davka B?");
     var hebrew = prompt("Copy paste that Hebrew");
@@ -264,7 +264,7 @@ $(document).ready(function() {
         console.log(englishLines+"LOOP")
         if (lineLeng >= lettersAllowed) {
             lineLeng = 0;
-            i -= englishLines.indexOf(' ');
+            i -= englishLines.indexOf(' ') + 2;
             englishArray[j] = reverseString(englishLines);
             j++
             console.log(englishLines+"IF START")
