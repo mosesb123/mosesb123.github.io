@@ -1,4 +1,4 @@
-//920pm
+//930pm
 $(document).ready(function() {
     var fontInput = prompt("SPT or Davka B?");
     var hebrew = prompt("Copy paste that Hebrew");
