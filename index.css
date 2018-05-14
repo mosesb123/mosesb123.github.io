@@ -1,74 +1,131 @@
-body {
-	height: 100%;
-	margin: 0;
-	text-align: center;
-	width: 100%;
-	font-family:'Calibri', serif;
-}
+
 * {
-	background-color: #9fd7fb
-}
-#title {
-	font-size: 150px;
+    box-sizing: border-box;
 }
 
-.dbutton {
-    display: block;
-    width: 180px;
-    height: 60px;
-    position: relative;
-    border: 2px solid #04a;
-    border-radius: 5px;
-    margin: 200px auto;
-    background-color: #06c;
+body {
+    font-family: Arial;
+    padding: 10px;
+    background: #f1f1f1;
 }
-.cbutton {
-    display: inline-block;
-    width: 180px;
-    height: 60px;
-    position: relative;
-    border: 2px solid #04a;
-    border-radius: 5px;
-    margin: 200px auto;
-    background-color: #06c;
+
+/* Header/Blog Title */
+.header {
+    padding: 30px;
+    text-align: center;
+    background: white;
+}
+
+.header h1 {
+    font-size: 50px;
+}
+
+/* Style the top navigation bar */
+.topnav {
+    overflow: hidden;
+    background-color: #9fd7fb;
+}
+
+/* Style the topnav links */
+.topnav a {
+    float: left;
+    display: block;
+    color: black ;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+}
+
+/* Change color on hover */
+.topnav a:hover {
+    background-color: darkblue;
+    color: #f2f2f2;
+}
+
+/* Create two unequal columns that floats next to each other */
+/* Left column */
+.leftcolumn {   
+    float: left;
+    width: 75%;
+}
+
+/* Right column */
+.rightcolumn {
+    float: left;
+    width: 25%;
+    background-color: #f1f1f1;
+    padding-left: 20px;
+}
+
+/* Fake image */
+.fakeimg {;
+    width: 100%;
+    padding: 20px;
+}
+
+/* Add a card effect for articles */
+.card {
+    text-align: center;
+    float: center;
+    background-color: white;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Footer */
+.footer {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 20px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {   
+        width: 100%;
+        padding: 0;
     }
-.cbutton .content {
-    display: block;
-    position: absolute;
-    bottom: 6px;
-    width: 100%;
-    height: 100%;
-    line-height: 60px;
+}
+
+/* Responsive layout - when the screen is less than 400px wide, make the navigation links stack on top of each other instead of next to each other */
+@media screen and (max-width: 400px) {
+    .topnav a {
+        float: none;
+        width: 100%;
+    }
+}
+.circle {
+    border-radius: 50%;
+
+}
+.circle:hover {
+        opacity: 0.5;
+    transition: opacity .1s;
+}
+.icon:hover {
+    opacity: 0.5;
+    transition: opacity .1s;
+}
+ul {
+    position: fixed;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background: #9fd7fb;
+}
+
+li {
+    float: center;
+    background: #9fd7fb;
     text-align: center;
-    background-color: #09f;
-    color: #ffffff;
-    text-transform: uppercase;
-    box-shadow: 0 6px 0 #06c;
-    border-radius: 5px;
-    transition: all 0.1s linear;
-}
-            
-.cbutton:active .content {
-    bottom: 0;
-    box-shadow: 0 0 0 #06c;
-}
-.dbutton .content {
-    display: block;
-    position: absolute;
-    bottom: 6px;
-    width: 100%;
-    height: 100%;
-    line-height: 60px;
-    text-align: center;
-    background-color: #09f;
-    color: #ffffff;
-    text-transform: uppercase;
-    box-shadow: 0 6px 0 #06c;
-    border-radius: 5px;
-    transition: all 0.1s linear;
-}
-            
-.dbutton:active .content {
-    bottom: 0;
-    box-shadow: 0 0 0 #06c;
+
 }
