@@ -19,7 +19,38 @@
 </div>
 <div class="leftcolumn">
 	<div class = "Card">
-		<h1> Here You Go </h1>
+
+		<h1> Enter Your info </h1>
+		<div class="dropdown">
+<button onclick="myFunction()" class="dropbtn">Dropdown</button>
+  <div id="myDropdown" class="dropdown-content">
+    <a href="#home">Davka Bodel</a>
+    <a href="#about">SPTiberian</a>
+  </div>
+</div>
+		<script>
+/* When the user clicks on the button, 
+toggle between hiding and showing the dropdown content */
+function myFunction() {
+    document.getElementById("myDropdown").classList.toggle("show");
+}
+
+// Close the dropdown if the user clicks outside of it
+window.onclick = function(event) {
+  if (!event.target.matches('.dropbtn')) {
+
+    var dropdowns = document.getElementsByClassName("dropdown-content");
+    var i;
+    for (i = 0; i < dropdowns.length; i++) {
+      var openDropdown = dropdowns[i];
+      if (openDropdown.classList.contains('show')) {
+        openDropdown.classList.remove('show');
+      }
+    }
+  }
+}
+</script>
+		<p> Hebrew Text </p>
 		<h3 id ="return"></h3>
 	</div>
 </div>
