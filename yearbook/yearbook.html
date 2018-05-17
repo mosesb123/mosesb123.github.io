@@ -103,6 +103,9 @@
         case ",":
             return '3'
             break;
+        case "'" :
+            return '4'
+            break;
         default:
             return Letter
         }
@@ -196,6 +199,9 @@
         case ",":
             return '3'
             break;
+        case "'" :
+            return '4'
+            break;
         default:
             return Letter
     
@@ -238,14 +244,41 @@ document.getElementById("return").innerHTML = englishWord;
 </div>
 <div class="leftcolumn">
 	<div class = "card">
+        <p><strong> This tool was created to change unicode Hebrew letters into English letters that when copypasted into 
+        <a href = "http://yearbookavenue.jostens.com/">Jostens</a> the correct Hebrew text would appear. </strong></p>
+    </div>
+     <div class = "card" style = "">
 
 		<h1> Enter Your info </h1>
 		<p> Davka Bodel or SPTiberian? </p> <input type = "text" id = "SD">
 		<p> Copy Paste that Hebrew </p> <input type = "text" id = "hebrew">
 		<button onclick = "converto()">Go</button>
 		<h3 id ="return"></h3>
+    </div>
+    <div class = "card" style = "width: 49.5%; float:left">
+        <h2> Instructions </h2>
+        <ol style = "text-align: left">
+            <li> Enter the font you want, SPTiberian or Davka Bodel. If misspelled it will default to Davka Bodel. </li>
+            <li> Paste or type in the Hebrew you need to Jostens-fy. </li>
+            <li> Press Go. </li>
+            <li> Copy the English text that just appeared under the second input box. </li>
+            <li> On Jostens, make sure your already selected your font in the text box you are using. </li>
+            <li> Right click and paste (Do not use Control or Command + V) your text. </li>
+            <li> Enjoy. </li>
+        </ol>
+    </div>
+    <div class = "card" style = "width: 49.5%; float:right ; ">
+        <h3> Don'ts </h3>
+        <ul style="text-align: left"> 
+            <li> Don't put grammar other than periods, as there is no equivalent for them on Jostens. If you notice something strange in your output, it is probably becuase there was some unseen punctuation </li>
+            <li> Don't put in more than one line of Hebrew at once, as that will cause the lines to be in reverse order </li>
+        </ul>
+    </div>
+    <div class = "card" style = "width: 49.5%; float:right ; ">
+    <a href = "http://www.mosesbakst.me/questions/questions.html"> <strong>Questions?</strong></a>
 	</div>
 </div>
+
 	<div class="rightcolumn">
     <div class="card">
       <h2 style= "text-align: center">About Me</h2>
